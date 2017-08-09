@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <RelativeLayout
+        android:id="@+id/rl_new_project_click"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <include layout="@layout/include_app_bar" />
+
+        <ScrollView
+            android:id="@+id/sv_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="?actionBarSize">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.lzyzsd.jsbridge.BridgeWebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/corner_white_color_5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/new_project_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="第一步（创作与调试）"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+
+                            <ImageView
+                                android:id="@+id/iv_new_project_tip"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/down_angle" />
+
+                            <TextView
+                                android:id="@+id/new_project_tip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/new_project_title"
+                                android:layout_marginBottom="3dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="1.【暂存】按钮可以将本次创作的输入历史和最新指令存储下来，只能存储最后一次有效数据。\n2.每次点击【暂存】都会覆盖上一次缓存的数据，请注意操作提示。\n3.【保存草稿】会将整个项目临时保存到草稿箱，可以保存多个。\n4.【重置画布】并不会清除暂存的数据。"
+                                android:textColor="@color/white"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/turtle_command"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical"
+                            android:paddingEnd="3dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingStart="3dp">
+
+                            <EditText
+                                android:id="@+id/turtle_input_command"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_text"
+                                android:enabled="true"
+                                android:gravity="top"
+                                android:hint="@string/input_command"
+                                android:maxLines="5"
+                                android:minHeight="100dp"
+                                android:minLines="2"
+                                android:scrollbars="vertical"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Button
+                                android:id="@+id/btn_history"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="历史输入"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_just_save"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="暂存"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_save_temp"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="保存草稿"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_input"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_pink_color_5dp"
+                                android:text="@string/btn_input_command"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <Button
+                                android:id="@+id/btn_reset"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="@string/btn_reset_page"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_submit"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="提交"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/turtle_command_tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/corner_gray_color_5dp"
+                            android:hint="@string/hint_area"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_300"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/corner_white_color_5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="第二步（上传项目）"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingEnd="3dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingStart="3dp">
+
+                            <EditText
+                                android:id="@+id/new_project_title2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_text"
+                                android:enabled="true"
+                                android:gravity="top"
+                                android:hint="请输入项目标题"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:scrollbars="vertical"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Button
+                                android:id="@+id/btn_up"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="上一步"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_submit2"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_pink_color_5dp"
+                                android:text="上传项目"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_temp_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/corner_white_color_5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:text="第二步（保存草稿）"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingEnd="3dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingStart="3dp">
+
+                            <EditText
+                                android:id="@+id/new_project_temp_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_text"
+                                android:enabled="true"
+                                android:gravity="top"
+                                android:hint="请输入项目标题(选填)"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:scrollbars="vertical"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Button
+                                android:id="@+id/btn_temp_up"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="上一步"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_temp_submit"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/corner_pink_color_5dp"
+                                android:text="保存草稿"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:icon="@drawable/class_update_time"
+        android:id="@+id/class_update_time"
+        android:title="@string/setting_update_time" />
+    <item
+        android:icon="@drawable/class_score"
+        android:id="@+id/class_score"
+        android:title="@string/setting_score" />
+    <item
+        android:icon="@drawable/class_view_count"
+        android:id="@+id/class_view_count"
+        android:title="@string/setting_view_count" />
+    <item
+        android:icon="@drawable/class_good_count"
+        android:id="@+id/class_good_count"
+        android:title="@string/setting_praise_count" />
+</menu>

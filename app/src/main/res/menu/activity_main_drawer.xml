@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/class_title"
+            android:title="@string/class_title" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/class_guangchang"
+            android:title="@string/class_square" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/class_mine"
+            android:title="@string/class_my_pro" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/class_temp"
+            android:title="@string/class_my_temp" />
+    </group>
+
+    <item android:title="@string/menu_setting">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/class_setting"
+                android:title="@string/menu_feek_back" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/class_about"
+                android:title="@string/menu_about" />
+        </menu>
+    </item>
+</menu>

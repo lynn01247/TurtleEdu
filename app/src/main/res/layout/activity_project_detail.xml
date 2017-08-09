@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/include_app_bar" />
+
+        <ScrollView
+            android:id="@+id/sv_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="?actionBarSize">
+
+                <com.github.lzyzsd.jsbridge.BridgeWebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginTop="300dp"
+                    android:background="@drawable/corner_white_color_5dp"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:padding="10dp"
+                                android:text="指令区"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/turtle_command"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingEnd="3dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingStart="3dp">
+
+                            <EditText
+                                android:id="@+id/turtle_input_command"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/input_text"
+                                android:enabled="false"
+                                android:gravity="top"
+                                android:hint="@string/input_command"
+                                android:maxLines="5"
+                                android:minLines="2"
+                                android:scrollbars="vertical"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <Button
+                                android:id="@+id/btn_tips"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="项目简介"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_command"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="查看指令"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_stop"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="停止"
+                                android:textColor="@color/white"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/btn_input"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:background="@drawable/corner_pink_color_5dp"
+                                android:text="@string/btn_input_command"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/btn_reset"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                style="?android:attr/buttonBarButtonStyle"
+                                android:background="@drawable/corner_blue_color_5dp"
+                                android:text="@string/btn_reset_page"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/turtle_command_tips"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/corner_gray_color_5dp"
+                            android:hint="@string/hint_area"
+                            android:padding="5dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/grey_300"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

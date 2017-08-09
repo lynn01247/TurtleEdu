@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/app_name">
+        <Preference
+            android:key="version"
+            android:summary="V"
+            android:title="@string/now_version" />
+        <Preference
+            android:key="update"
+            android:title="@string/check_update" />
+        <Preference
+            android:key="share"
+            android:title="@string/menu_share" />
+        <Preference
+            android:key="fork"
+            android:summary="https://github.com/lynn01247/TurtleEdu"
+            android:title="Fork支持一下" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/about_api">
+        <Preference
+            android:summary="参考了该开源资料，并按需做了些许修改，感谢共享：\nhttps://github.com/inexorabletash/jslogo"
+            android:title="Logo语言封装" />
+        <Preference
+            android:summary="部分收集网上资料，如有侵权，请第一时间邮件联系，我们会及时配合处理。开发者邮箱：\nyinbin0809@126.com（或）\n2443938389@qq.com"
+            android:title="课程资料" />
+    </PreferenceCategory>
+</PreferenceScreen>
