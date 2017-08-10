@@ -9,24 +9,33 @@
 
 <img src="/screen_pic/pic.png" title="" width="270" height="486" /> <br>
 <img src="/screen_pic/pic6.png" title="" width="270" height="486" /> <br>
+
+### 整体效果，动态GIF图
+
 <img src="/screen_pic/1.gif" title="" width="270" height="486" /> <br>
 
 ### 下载离线课程
 
 <img src="/screen_pic/pic1.png" title="" width="270" height="486" /> <br>
 <img src="/screen_pic/pic2.png" title="" width="270" height="486" /> <br>
+
+### 下载离线课程，动态GIF图
+
 <img src="/screen_pic/3.gif" title="" width="270" height="486" /> <br>
 
 ### 观看教学课程或者项目广场别人共享的项目
 
 <img src="/screen_pic/pic4.png" title="" width="270" height="486" /> <br>
+
+### 观看教学课程或者项目广场别人共享的项目，动态GIF图
+
 <img src="/screen_pic/4.gif" title="" width="270" height="486" /> <br>
 
 ### 自己的草稿箱
 
 <img src="/screen_pic/pic5.png" title="" width="270" height="486" /> <br>
 
-### 项目横竖屏切换
+### 项目横竖屏切换，动态GIF图
 
 <img src="/screen_pic/5.gif" title="" width="270" height="486" /> <br>
 
