@@ -7,28 +7,28 @@
 
 ### 整体效果
 
-<img src="/screen/pic.png" title="" width="270" height="486" /> <br>
-<img src="/screen/pic6.png" title="" width="270" height="486" /> <br>
-<img src="/screen/1.gif" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic6.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/1.gif" title="" width="270" height="486" /> <br>
 
 ### 下载离线课程
 
-<img src="/screen/pic1.png" title="" width="270" height="486" /> <br>
-<img src="/screen/pic2.png" title="" width="270" height="486" /> <br>
-<img src="/screen/3.gif" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic1.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic2.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/3.gif" title="" width="270" height="486" /> <br>
 
 ### 观看教学课程或者项目广场别人共享的项目
 
-<img src="/screen/pic4.png" title="" width="270" height="486" /> <br>
-<img src="/screen/4.gif" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic4.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/4.gif" title="" width="270" height="486" /> <br>
 
 ### 自己的草稿箱
 
-<img src="/screen/pic5.png" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/pic5.png" title="" width="270" height="486" /> <br>
 
 ### 项目横竖屏切换
 
-<img src="/screen/5.gif" title="" width="270" height="486" /> <br>
+<img src="/screen_pic/5.gif" title="" width="270" height="486" /> <br>
 
 ## 数据来源API接口 ##
 ### 1. 数据是自己写的后台，后台搭建在LeanCloud【非广告：这是免费的轻量级后台管理维护系统，可以基于Java、PHP等语言，具体信息请移步官网：https://leancloud.cn/】
